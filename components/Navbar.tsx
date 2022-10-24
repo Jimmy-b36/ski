@@ -5,9 +5,9 @@ const Navbar = () => {
     <div>
       <nav
         aria-label="Site Nav"
-        className="mx-auto mt-5 flex max-w-4xl items-center justify-center p-4 bg-primary h-16 rounded-md"
+        className="flex items-center justify-center w-3/4 h-16 p-4 mx-auto mt-5 rounded-md bg-primary"
       >
-        <ul className="flex items-center justify-center gap-2 text-sm font-medium text-gray-500 w-full">
+        <ul className="flex items-center justify-center w-full gap-2 text-sm font-medium text-gray-800">
           <li className="hidden lg:block">
             <Link href="/about">Home</Link>
           </li>
