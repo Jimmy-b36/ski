@@ -7,15 +7,30 @@ const Home: NextPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex justify-center m-20  flex-col items-center">
-        <h1 className="text-5xl my-5">About me</h1>
-        <div className="flex w-3/4 flex-row justify-center">
-          <img
-            src="https://raw.githubusercontent.com/Jimmy-b36/ski/main/assets/profile.png?token=GHSAT0AAAAAAB2HYGPALZGPRUTCUP6WHPSKY2S7OVA"
-            className=" w-1/4 h-auto object-contain"
+      <div className="flex flex-col items-center justify-center m-20">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute w-full rounded-lg h-100vh -z-10"
+        >
+          <source
+            src="https://media.istockphoto.com/id/1362306332/video/beautiful-skiing-idyllic-mountain-winter-forest-snow-landscape-skiing-on-the-ski-slopes-on.mp4?s=mp4-640x640-is&k=20&c=Xuv5fJ-gkNi9C7U834ecFPQ6iewECcjDkWJVSsngJ60="
+            type="video/mp4"
           />
-          <div className=" w-1/2 h-auto p-5 flex items-center">
-            <p>
+          Your browser does not support the video tag.
+        </video>
+
+        <h1 className="p-5 my-5 text-4xl font-bold tracking-tight text-white bg-black rounded-lg sm:text-5xl bg-opacity-20">
+          About me
+        </h1>
+        <div className="flex flex-row justify-center w-3/4 bg-black rounded-lg bg-opacity-20">
+          <img
+            src="https://raw.githubusercontent.com/jhoangqm/skee/main/server/image/1664997198083.png"
+            className="object-contain w-1/4 h-auto "
+          />
+          <div className="flex items-center w-1/2 h-auto p-5 ">
+            <p className="text-white ">
               Fringilla sollicitudin congue rhoncus ligula cubilia hendrerit per
               sit venenatis molestie mi mus. Proin gravida semper pulvinar hac
               condimentum himenaeos dapibus sociosqu curae varius consequat
@@ -30,7 +45,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="divider w-3/4 flex justify-center"></div>
+        <div className="flex justify-center w-3/4 divider"></div>
       </div>
 
       <Reviews />
