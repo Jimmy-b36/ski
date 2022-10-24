@@ -21,10 +21,10 @@ const Home: NextPage = () => {
           Your browser does not support the video tag.
         </video>
 
-        <h1 className="p-5 my-5 text-4xl font-bold tracking-tight text-white bg-black rounded-lg sm:text-5xl bg-opacity-20">
+        <h1 className="p-5 my-5 text-4xl font-bold tracking-tight text-white rounded-lg bg-black/20 sm:text-5xl">
           About me
         </h1>
-        <div className="flex flex-row justify-center w-3/4 bg-black rounded-lg bg-opacity-20">
+        <div className="flex flex-row justify-center w-3/4 rounded-lg bg-black/20 ">
           <img
             src="https://raw.githubusercontent.com/jhoangqm/skee/main/server/image/1664997198083.png"
             className="object-contain w-1/4 h-auto "
