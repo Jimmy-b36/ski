@@ -15,7 +15,7 @@ const Home: NextPage = () => {
           className="absolute w-full rounded-lg h-100vh -z-10"
         >
           <source
-            src="https://media.istockphoto.com/id/1362306332/video/beautiful-skiing-idyllic-mountain-winter-forest-snow-landscape-skiing-on-the-ski-slopes-on.mp4?s=mp4-640x640-is&k=20&c=Xuv5fJ-gkNi9C7U834ecFPQ6iewECcjDkWJVSsngJ60="
+            src="https://media.istockphoto.com/id/487919591/video/aerial-view-of-epic-mountain-scenery-snow-background.mp4?s=mp4-640x640-is&k=20&c=qnLLe2wlg0p7BdUAyIZ7YYGZ9CwudNs5iCIn5sEM6XY="
             type="video/mp4"
           />
           Your browser does not support the video tag.
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
             className="object-contain w-1/4 h-auto "
           />
           <div className="flex items-center w-1/2 h-auto p-5 ">
-            <p className="text-white ">
+            <p className="text-gray-200 text-bold">
               Fringilla sollicitudin congue rhoncus ligula cubilia hendrerit per
               sit venenatis molestie mi mus. Proin gravida semper pulvinar hac
               condimentum himenaeos dapibus sociosqu curae varius consequat
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="flex justify-center w-3/4 divider"></div>
+        <div className="flex justify-center w-3/4 "></div>
       </div>
 
       <Reviews />
