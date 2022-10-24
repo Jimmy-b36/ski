@@ -9,7 +9,7 @@ const Navbar = () => {
       >
         <ul className="flex items-center justify-center w-full gap-2 text-sm font-medium text-gray-800">
           <li className="hidden lg:block">
-            <Link href="/about">Home</Link>
+            <Link href="/">Home</Link>
           </li>
 
           <li className="mx-3">
