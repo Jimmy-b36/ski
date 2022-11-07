@@ -5,8 +5,8 @@ const Footer = () => {
     <footer aria-label="Site Footer">
       <div>
         <nav className="flex flex-col items-center justify-center w-3/4 p-4 mx-auto mb-5 rounded-md bg-primary">
-          <ul className="flex items-center justify-center w-full gap-2 mt-3 text-sm font-medium text-gray-800">
-            <li className="hidden lg:block">
+          <ul className="items-center justify-center hidden w-full gap-2 mt-3 text-sm font-medium text-gray-800 sm:flex md:flex lg:flex xl:flex">
+            <li className="mx-3">
               <Link href="/about">Home</Link>
             </li>
 
@@ -20,7 +20,7 @@ const Footer = () => {
               <Link href="/before">Before you go</Link>
             </li>
           </ul>
-          <ul className="flex justify-center gap-6 mt-5 md:gap-8">
+          <ul className="flex justify-center gap-6 mt-0 sm:mt-5 md:mt-5 lg:mt-5 xl:mt-5 md:gap-8">
             <li>
               <a
                 href="/"
