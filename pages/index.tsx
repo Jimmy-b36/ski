@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Reviews from '../components/Reviews';
+import Contact from '../components/Contact';
 
 const Home: NextPage = () => {
   return (
@@ -49,6 +50,7 @@ const Home: NextPage = () => {
       </div>
 
       <Reviews />
+      <Contact />
       <Footer />
     </div>
   );
