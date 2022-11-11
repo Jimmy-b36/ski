@@ -1,8 +1,21 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-scroll';
+import { useEffect, useState } from 'react';
+import CalendarModal from '../components/CalendarModal';
 
 const Booking = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      window.innerWidth > 1280 ? setShowModal(false) : null;
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div id="booking-container" className="scroll-smooth">
       <Navbar />
@@ -15,9 +28,17 @@ const Booking = () => {
             </h1>
 
             <p className="max-w-xl mx-auto mt-4 sm:text-xl sm:leading-relaxed">
-              If you would like to book a lesson with me please check my
-              availability on the left and then fill out the form below
+              If you would like to book a lesson with me please check{' '}
+              <span className="hidden xl:inline">my availability</span>{' '}
+              <button
+                className="underline xl:hidden sm:inline md:inline lg:inline xs:inline"
+                onClick={() => setShowModal(showModal ? false : true)}
+              >
+                my availability
+              </button>{' '}
+              and then fill out the form below
             </p>
+            {showModal && <CalendarModal showModal={showModal} />}
 
             <div className="flex flex-wrap justify-center gap-4 mt-8">
               <Link
@@ -37,16 +58,12 @@ const Booking = () => {
         </div>
       </section>
 
+      <CalendarModal showModal={showModal} />
+
       <div className="flex justify-center w-full h-[1200px] p-10" id="booking">
-        <div className="sticky top-0 w-20 p-10 h-[30rem]  ">
-          <iframe
-            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FVancouver&showDate=1&showTabs=0&showPrint=0&showCalendars=0&src=c2hyZWFkZXJ6MzZAZ21haWwuY29t&color=%237986CBr"
-            className="h-full -ml-72"
-          ></iframe>
-        </div>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSf1JzlcjjIehQ9J6DVx4axB19QWL-B4OI1G4TDVC8IiZcw00A/viewform"
-          className="w-1/2 h-full mr-16"
+          className="w-full h-full md:w-2/3 lg:w-1/2 xl:w-1/2 "
         />
       </div>
       <div className="flex justify-center w-full" id="availability"></div>
