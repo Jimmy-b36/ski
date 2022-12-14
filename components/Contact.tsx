@@ -7,10 +7,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        contactForm.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_SERVICE_ID ?? 'no service id',
+        process.env.NEXT_PUBLIC_TEMPLATE_ID ?? 'no template id',
+        contactForm.current ?? 'no form',
+        process.env.NEXT_PUBLIC_PUBLIC_KEY ?? 'no public key'
       )
       .then(res => {
         console.log('SUCCESS!', res.status, res.text);
@@ -22,7 +22,7 @@ const Contact = () => {
     <div className="flex flex-col items-center justify-center mb-10">
       <h1 className="mb-5 text-3xl font-bold">Contact me</h1>
       <div className="flex flex-row items-center justify-center">
-        <div></div> {/* // TODO: somesort of image here */}
+        <div></div> {/* // TODO: some sort of image here */}
         <form
           onSubmit={sendEmail}
           ref={contactForm}
@@ -62,11 +62,11 @@ const Contact = () => {
           </label>
 
           <label htmlFor="clientQuery" className="p-2 font-bold text-white">
-            Query:
+            Your message:
           </label>
           <textarea
             className="mb-3 text-black bg-white textarea w-54"
-            placeholder=""
+            placeholder="Enter your message here..."
             name="user_query"
           ></textarea>
           <input
