@@ -49,7 +49,7 @@ const Booking = () => {
                 offset={50}
                 duration={700}
               >
-                <div className="block w-full px-12 py-3 text-sm font-medium text-white border border-blue-600 rounded hover:bg-gradient-to-r hover:from-green-300 hover:via-blue-500 hover:to-purple-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto">
+                <div className="block w-full px-12 py-3 text-sm font-medium text-white border border-blue-600 rounded hover:cursor-pointer hover:bg-gradient-to-r hover:from-green-300 hover:via-blue-500 hover:to-purple-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto">
                   Book lesson
                 </div>
               </Link>
